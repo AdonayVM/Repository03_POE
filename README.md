@@ -1,2 +1,2 @@
 # Repository03_POE
-Here is my JAVA project for Programación Orientada a Eventos, UNICAES
+Here is my JAVA project for Practica03, Event-oriented programming, UNICAES
