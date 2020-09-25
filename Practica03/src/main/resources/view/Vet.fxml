@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="665.0" stylesheets="@../css/cssView.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER" prefHeight="38.0" prefWidth="600.0" spacing="270.0">
+         <children>
+            <Label fx:id="lblCliente" text="CLIENTE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblMascota" text="MASCOTA">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox prefHeight="398.0" prefWidth="666.0">
+         <children>
+            <GridPane prefHeight="312.0" prefWidth="300.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="145.20001220703125" minWidth="10.0" prefWidth="67.39996337890625" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="226.79998779296875" minWidth="10.0" prefWidth="191.4000366210938" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="t" text="NOMBRE" />
+                  <Label text="CORREO" GridPane.rowIndex="1" />
+                  <Label text="TELÉFONO" GridPane.rowIndex="2" />
+                  <TextField GridPane.columnIndex="1" />
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+               <padding>
+                  <Insets bottom="200.0" left="10.0" right="30.0" />
+               </padding>
+            </GridPane>
+            <GridPane prefHeight="347.0" prefWidth="366.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="145.20001220703125" minWidth="10.0" prefWidth="133.19996337890623" />
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="199.5999755859375" minWidth="10.0" prefWidth="155.60003662109375" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="86.00000228881837" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="89.99999179840088" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="106.79999389648438" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="119.20001831054688" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="128.39999999999998" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="136.80000915527341" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="139.80003967285154" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="145.20003356933591" minHeight="10.0" prefHeight="145.20003356933591" valignment="BASELINE" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="NOMBRE" />
+                  <Label text="RAZA" GridPane.rowIndex="2" />
+                  <Label text="FECHA DE NACIMIENTO" GridPane.rowIndex="1" />
+                  <Label text="ESPECIE" GridPane.rowIndex="3" />
+                  <Label text="SEXO" GridPane.rowIndex="4" />
+                  <Label text="PESO" GridPane.rowIndex="5" />
+                  <Label text="COLOR" GridPane.rowIndex="6" />
+                  <Label text="COMENTARIOS" GridPane.rowIndex="7" />
+                  <TextField GridPane.columnIndex="1" />
+                  <DatePicker prefHeight="26.0" prefWidth="202.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <children>
+                        <RadioButton mnemonicParsing="false" text="Macho">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="sexo" />
+                           </toggleGroup>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" text="Hembra" toggleGroup="$sexo">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </HBox>
+                  <Spinner prefHeight="26.0" prefWidth="90.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <ColorPicker GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <TextArea prefHeight="42.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" />
+               </padding>
+            </GridPane>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="56.0" prefWidth="600.0" spacing="25.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="51.0" prefWidth="130.0" text="Guardar">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/save.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="51.0" prefWidth="130.0" text="Cancelar">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/cancel.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>
